@@ -1,9 +1,10 @@
 import xmltodict
 import logging
 from collections import defaultdict
+from typing import Any, DefaultDict, Union
 
 
-def recursive_defaultdict():
+def recursive_defaultdict() -> DefaultDict[Any, Union[Any, DefaultDict[Any, Any]]]:
     return defaultdict(recursive_defaultdict)
 
 
